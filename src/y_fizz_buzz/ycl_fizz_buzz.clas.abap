@@ -12,12 +12,13 @@ CLASS ycl_fizz_buzz DEFINITION
     METHODS convert IMPORTING number        TYPE int1
                     RETURNING VALUE(result) TYPE tt_list.
 
-    METHODS convert_number IMPORTING number        TYPE int1
-                           RETURNING VALUE(result) TYPE string.
 
   PRIVATE SECTION.
     CONSTANTS fizz TYPE string VALUE `Fizz` ##NO_TEXT.
     CONSTANTS buzz TYPE string VALUE `Buzz` ##NO_TEXT.
+
+    METHODS convert_number IMPORTING number        TYPE int1
+                           RETURNING VALUE(result) TYPE string.
 
     METHODS is_dividable_by_3 IMPORTING number        TYPE int1
                               RETURNING VALUE(result) TYPE abap_boolean.
