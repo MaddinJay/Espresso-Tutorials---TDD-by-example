@@ -3,6 +3,15 @@ CLASS ycl_fizz_buzz DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
+    TYPES: BEGIN OF ts_list,
+             number           TYPE int1,
+             converted_number TYPE string,
+           END OF ts_list,
+           tt_list TYPE STANDARD TABLE OF ts_list WITH DEFAULT KEY.
+
+    METHODS convert IMPORTING number        TYPE int1
+                    RETURNING VALUE(result) TYPE tt_list.
+
     METHODS convert_number IMPORTING number        TYPE int1
                            RETURNING VALUE(result) TYPE string.
 
@@ -18,6 +27,10 @@ CLASS ycl_fizz_buzz DEFINITION
 ENDCLASS.
 
 CLASS ycl_fizz_buzz IMPLEMENTATION.
+
+  METHOD convert.
+    APPEND VALUE ts_list( number = number converted_number = convert_number( number ) ) TO result.
+  ENDMETHOD.
 
   METHOD convert_number.
     result = COND #( WHEN is_dividable_by_3( number ) AND is_dividable_by_5( number ) THEN |{ fizz }{ buzz }|
