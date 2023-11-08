@@ -13,7 +13,8 @@ CLASS ltcl_fizz_buzz DEFINITION FINAL FOR TESTING
       for_5_return_buzz         FOR TESTING,
       for_15_return_fizzbuzz    FOR TESTING,
       for_100_return_buzz       FOR TESTING,
-      for_1_to_1_return_result  FOR TESTING.
+      for_1_to_1_return_result  FOR TESTING,
+      for_1_to_5_return_list    FOR TESTING.
 ENDCLASS.
 
 CLASS ltcl_fizz_buzz IMPLEMENTATION.
@@ -50,6 +51,15 @@ CLASS ltcl_fizz_buzz IMPLEMENTATION.
   METHOD for_1_to_1_return_result.
     cl_abap_unit_assert=>assert_equals( exp = VALUE ycl_fizz_buzz=>tt_list( ( number = 1 converted_number = |1| ) )
                                         act = cut->convert( 1 ) ).
+  ENDMETHOD.
+
+  METHOD for_1_to_5_return_list.
+    cl_abap_unit_assert=>assert_equals( exp = VALUE ycl_fizz_buzz=>tt_list( ( number = 1 converted_number = |1| )
+                                                                            ( number = 2 converted_number = |2| )
+                                                                            ( number = 3 converted_number = |Fizz| )
+                                                                            ( number = 4 converted_number = |4| )
+                                                                            ( number = 5 converted_number = |Buzz| ) )
+                                        act = cut->convert( 5 ) ).
   ENDMETHOD.
 
 ENDCLASS.

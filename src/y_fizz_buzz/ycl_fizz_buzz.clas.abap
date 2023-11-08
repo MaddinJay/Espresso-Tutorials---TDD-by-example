@@ -29,7 +29,12 @@ ENDCLASS.
 CLASS ycl_fizz_buzz IMPLEMENTATION.
 
   METHOD convert.
-    APPEND VALUE ts_list( number = number converted_number = convert_number( number ) ) TO result.
+    DATA actual_number TYPE int1 VALUE 1.
+
+    DO number TIMES.
+      APPEND VALUE ts_list( number = actual_number converted_number = convert_number( actual_number ) ) TO result.
+      actual_number = actual_number + 1.
+    ENDDO.
   ENDMETHOD.
 
   METHOD convert_number.
