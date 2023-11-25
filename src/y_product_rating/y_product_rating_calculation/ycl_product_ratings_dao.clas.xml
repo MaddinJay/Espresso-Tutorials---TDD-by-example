@@ -3,23 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>YCL_AVG_RATING_CALCULATION</CLSNAME>
+    <CLSNAME>YCL_PRODUCT_RATINGS_DAO</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Calculation of average rating</DESCRIPT>
+    <DESCRIPT>Product Ratings DAO</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
-    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
    </VSEOCLASS>
-   <DESCRIPTIONS_SUB>
-    <SEOSUBCOTX>
-     <CMPNAME>PROCESS</CMPNAME>
-     <SCONAME>PRODUCT_ID</SCONAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Product ID</DESCRIPT>
-    </SEOSUBCOTX>
-   </DESCRIPTIONS_SUB>
   </asx:values>
  </asx:abap>
 </abapGit>
