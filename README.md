@@ -2,7 +2,7 @@
 
 For links and slides, see: https://miro.com/app/board/uXjVNLJPRew=/
 
-This repository was created for the Espresso Tutorials course "TDD by example." Link to the course: TBD
+This repository was created for the Espresso Tutorials course "TDD in ABAP OO by example." Link to the course: https://et.training/dashboard/product/video/1397?search=ABAP%20OO
 
 ## Introductory Example in TDD - Code Kata FizzBuzz
 
